@@ -7,7 +7,31 @@
 body{
     background: #020202;
     color: #fff;
+    /*extra fluff*/
+    overflow: hidden;
+    position: relative;
 }
+
+/* Stars background */
+.star {
+  position: fixed;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite alternate;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+
+@keyframes twinkle {
+  0% {opacity: 0.5;}
+  50% {opacity: 1;}
+  100% {opacity: 0.5;}
+}
+
+
+/*existing header*/
 #header{
     width: 100%;
     height: 100vh;
@@ -15,4 +39,8 @@ body{
     background-size: contain;
     background-position: top right;
     background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
 }
+
+
