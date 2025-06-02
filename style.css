@@ -24,6 +24,8 @@ body{
 }
 
 
+
+
 @keyframes twinkle {
   0% {opacity: 0.5;}
   50% {opacity: 1;}
@@ -42,5 +44,7 @@ body{
     position: relative;
     z-index: 1;
 }
-
+.container{
+    padding: 10px 10%;
+}
 

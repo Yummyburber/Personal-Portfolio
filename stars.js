@@ -1,6 +1,7 @@
-
+document.addEventListener("DOMContentLoaded",() => {
   const starCount = 100;
-
+  const starWrapper=document.querySelector(".stars");
+  
   for(let i = 0; i < starCount; i++) {
     const star = document.createElement('div');
     star.classList.add('star');
@@ -20,3 +21,4 @@
 
     document.body.appendChild(star);
   }
+});
