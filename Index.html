@@ -10,7 +10,7 @@
     <body>
 
     <!--Stars background layer-->
-    <!--Stars background layer-- <div class="stars"></div>--->
+     <div class="stars"></div>
 
   
     
@@ -41,27 +41,61 @@
                     <img src="images/user.jpg" alt="som supposed to be here!!!">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p> Lorem ipsum dolor sit amet, consectetur 
+                     <h1 class="sub-title">About Me</h1>
+                       <p> Lorem ipsum dolor sit amet, consectetur 
                        adipiscing elit. Sed do eiusmod tempor 
                        incididunt ut labore et dolore magna aliqua.</p>
 
                        <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                        </div>
-                       <div class="tab-contents">
+                       <!--Skills-->
+                       <div class="tab-contents active-tab" id="skills">
                             <ul>
                                 <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
                                 <li><span>Web Development</span><br> Web App Development</li>
                                 <li><span>App development</span><br>Building Apps</li>
                             </ul>
-                    </div>    
+                       </div> 
+                       <!--Experience-->
+                       <div class="tab-contents" id="experience">
+                            <ul>
+                                <!--WORK ON PROJECTS HERE!!!!!!!!!!!!!-->
+                                <li><span>ADD ME</span><br>ADD ME</li>
+                                <li><span>ADD ME</span><br> ADD ME</li>
+                                <li><span>ADD ME</span><br>ADD ME</li>
+                            </ul>
+                       </div>
+                       <!--Education-->
+                       <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>School</span><br>Computer Science at Loras College</li>
+                                <li><span>Self-taught</span><br> While also learning from school,
+                                I realized it was not enough for me and used tools to reinforce my 
+                                understanding of languages, frameworks, and implication</li>
+                            </ul>
+                       </div>            
                 </div>
-            </div>
-        </div>
-    </div>
+           </div>
+       </div>
+   </div>
+   <script>
+
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+   </script>
      <!--Star Scripts-->
     <script src="stars.js"></script>
     </body>

@@ -192,6 +192,12 @@ nav ul li a:hover::after {
     z-index: 3;
 }
 .tab-contents ul li span{
-    color: #ff004f;
+    color: #b5476b;
     font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
 }
